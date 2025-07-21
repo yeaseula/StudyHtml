@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리집 고양이 소개</title>
+
+    <style>
+        h1,h2,h3,h4,h5,h6,p {
+            text-align: center;
+        }
+        *{
+            line-height: 1.5 !important;
+            text-align: center;
+        }
+        .section_wrap {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+        section {
+            border: 1px solid #e0e0e0;
+            flex: 0 0 33.3333%;
+        }
+        .img_box {
+            width: 150px;
+            height: 150px;
+            border-radius: 500%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+        }
+        ul li { text-align: left;}
+    </style>
+  </head>
+  <body>
+    <h1>우리집 야옹이 소개합니다 😾</h1>
+
+    <figure>
+        <img src="./img/cats.jpg" style="max-width: 500px;" alt="고양이 세마리 사진">
+        <figcaption>(희귀사진) 원래 세마리가 모이면 싸워요.</figcaption>
+    </figure>
+
+    <div class="section_wrap">
+        <section id="section1">
+            <h2>고양이 1번</h2>
+            <figure>
+                <div class="img_box" style="background-image: url('./img/colorcat1.jpg');">
+                </div>
+            </figure>
+            <ul>
+                <li>이름 : 모카</li>
+                <li>나이 : 13</li>
+                <li>특징 : <mark>말대꾸</mark> 잘함</li>
+                <li><em>인터넷에서 임시보호한다는 글 보고 데려왔어요</em></li>
+            </ul>
+        </section>
+        <section id="section2">
+            <h2>고양이 2번</h2>
+            <figure>
+                <div class="img_box" style="background-image: url('./img/blackcat1.jpg');">
+                </div>
+            </figure>
+
+            <ul>
+                <li>이름 : 까망베르</li>
+                <li>나이 : 12</li>
+                <li>특징 : <mark>겁보</mark></li>
+                <li><em>아빠가 길에서 주워왔어요</em></li>
+            </ul>
+        </section>
+        <section id="section2">
+            <h2>고양이 3번</h2>
+            <figure>
+                <div class="img_box" style="background-image: url('./img/goldcat.jpg');">
+                </div>
+            </figure>
+
+            <ul>
+                <li>이름 : 콩</li>
+                <li>나이 : 10</li>
+                <li>특징 : 엄청..<mark>사나움</mark></li>
+                <li><em>저희집 다락방에 엄마냥이 낳고 버리고 갔어요</em></li>
+            </ul>
+        </section>
+    </div>
+  </body>
+</html>
