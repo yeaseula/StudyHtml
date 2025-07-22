@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>team2 project1 - login</title>
+
+    <style>
+      section {
+        background-color: #fff;
+      }
+      .sr-only {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .login_wrap {
+        box-sizing: border-box;
+        width: 350px;
+        padding: 20px 16px;
+        border-radius: 5px;
+        border: 1px solid #bdbdbd;
+      }
+      .login_wrap > p {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      button {
+        margin: 16px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        padding: 11px 0;
+        border-radius: 4px;
+        background-color: #711BFF;
+        border: 1px solid #711BFF;
+      }
+
+      button > img {
+        max-width: 102px;
+      }
+
+      button > span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .login_bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .login_bottom img {
+        max-width: 16px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2 class="sr-only">login</h2>
+      <div class="login_wrap">
+        <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+
+        <button type="submit">
+          <!--
+          스크린 리더가 위니브 로고 이미지 이미지 라고 두 번 읽을 수 있으니
+          '위니브 로고' 로 변경
+          <img src="assets/weniv-logo.png" alt="위니브 로고 이미지">
+          -->
+          <img src="assets/weniv-logo.png" alt="위니브 로고">
+          <span>로그인</span>
+        </button>
+
+        <div class="login_bottom">
+          <!--dl은 고정적인 불변의 데이터를 담고있기 때문에 ul 태그로 변경-->
+          <ul>
+            <!-- 디자인을 위한 이미지라면 alt 생략
+            <li><img src="assets/icon-lock.png" alt="아이디/비밀번호 찾기 아이콘"></li>
+            -->
+            <li><img src="assets/icon-lock.png"></li>
+            <li><a href="" target="_blank">아이디</a></li>
+            <li><a href="" target="_blank">비밀번호 찾기</a></li>
+          </ul>
+          <a href="" target="_blank"> <img src="assets/icon-user.png">회원가입</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

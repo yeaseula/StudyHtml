@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>각종 시멘틱 태그들</title>
+  </head>
+  <body>
+    <!-- 시멘틱 마크업은 인터넷에 떠다니는 정보들을 컴퓨터가 이해할 수 있고,
+    그 정보를 가공할 수 있도록 하는 것이 목적입니다.
+    또한, 웹 접근성을 향상시켜 정보 격차를 해소하는 데 도움을 줍니다. -->
+    <header>
+        <h1>위니브</h1>
+        <nav>
+            <ul>
+                <li><a href="">홈</a></li>
+                <li><a href="">강사진 소개</a></li>
+                <li><a href="">커리큘럼 소개</a></li>
+                <li><a href="">오시는길</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--main 시작-->
+    <!--main은 웹페이지에서 한번만 사용가능-->
+    <main>
+        <article>
+            <!--반드시 제목 요소를 자식으로 포함해야됨-->
+            <h2>제목</h2>
+            article 태그 입니다.
+        </article>
+        <section>
+            <!--반드시 제목 요소를 자식으로 포함해야됨/나중에 숨겨도 좋음-->
+            <h2>section 제목이됩니다. 필수 포함입니다!</h2>
+            section 입니다.
+        </section>
+        <section>
+            <h2>section 제목이됩니다. 필수 포함입니다!</h2>
+            section 입니다.
+        </section>
+    </main>
+    <!--main 끝-->
+    <!--보조적인 역할의 사이드바, 배너 등등-->
+    <aside>
+        <h2>사이드바입니다</h2>
+        <nav>
+            <ul>
+                <li>목록1</li>
+                <li>목록2</li>
+                <li>목록3</li>
+            </ul>
+        </nav>
+    </aside>
+    <!--hr 태그는 p 태그 안에서는 사용을 안해요!-->
+    <!--스크린리더 이용자에게 유용할수도 있음.
+        주제 전환을 알리는 기능 하기도 함.
+        나중에 디자인에서 숨기는 경우 있음
+    -->
+    <hr />
+    <!--hr 끝-->
+
+    <!--footer 시작-->
+    <footer>
+        <adress>
+            <dl>공지사항</dl>
+            <dl>이용약관</dl>
+            <dl>개인정보처리방침</dl>
+            <dl>저작권 정보</dl>
+        </adress>
+    </footer>
+  </body>
+</html>
