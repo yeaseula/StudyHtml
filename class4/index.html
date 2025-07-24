@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video</title>
+  </head>
+  <body>
+
+    <!--controls 속성이 없으면 재생되지 않는다
+    autoplay - muted 속성과 함께 사용해야한다
+    poster 썸네일을 보여준다
+    -->
+    <video src="assets/rabbit.mp4" width="300"
+    controls preload="auto"></video>
+
+    <!--source
+        type 속성은 source에 반드시 작성해줘야한다.
+        브라우저가 재생 가능한 타입인지 확인하기위해
+        mp4 -> (다른 속성들..) 순서대로 추천
+    -->
+
+    <!--고화질일 때 media 속성-->
+    <video src="" controls width="300">
+        <source src="assets/rabbit.mp4"
+        type="video/mp4"
+        media="(min-width: 1024px)">
+    <!--저화질일 때 media 속성-->
+    <video src="" controls width="300">
+        <source src="assets/rabbit.mp4"
+        type="video/mp4"
+        media="(max-width: 1023px)">
+        <source src="assets/rabbit.MOV" type="video/quicktime">
+        비디오를 재생할 수 없습니다.
+    </video>
+  </body>
+</html>

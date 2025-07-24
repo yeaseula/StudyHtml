@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개인 실습</title>
+    <style>
+        form {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 800px;
+        }
+        input,select {
+            display: block;
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+            height: auto;
+        }
+        .sr-only {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get">
+        <label for="user-id">아이디</label>
+        <input type="text" id="user-id" name="user-id">
+
+        <label for="user-pw">비밀번호</label>
+        <p class="sr-only">특수문자 포함 필수</p>
+        <input type="password" id="user-pw" name="user-pw" placeholder="특수문자 포함 필수">
+
+        <label for="user-birth">생일</label>
+        <input type="date" id="user-birth" name="user-birth">
+
+        <label for="profile-pic">프로필사진</label>
+        <input type="file" id="profile-pic" name="profile-pic">
+
+        <select name="phone1" id="phone1">
+            <option value="SKT" selected>SKT</option>
+            <option value="LGU">LGU</option>
+            <option value="KT">KT</option>
+            <option value="알뜰폰">알뜰폰</option>
+        </select>
+
+        <label for="phone-number">연락처</label>
+        <input type="tel" id="phone-number" name="phone-number">
+
+        <fieldset>
+            <legend>성별</legend>
+
+            <label for="men">남성</label>
+            <input type="radio" id="men" name="gender">
+
+            <label for="women">여성</label>
+            <input type="radio" id="women" name="gender">
+        </fieldset>
+
+        <fieldset>
+            <legend>사용 기술</legend>
+
+            <label for="html">HTML</label>
+            <input type="checkbox" id="html" name="skills">
+
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css" name="skills">
+
+            <label for="js">Javascript</label>
+            <input type="checkbox" id="js" name="skills">
+
+            <label for="py">Python</label>
+            <input type="checkbox" id="py" name="skills">
+
+            <label for="jango">Django</label>
+            <input type="checkbox" id="jango" name="skills">
+        </fieldset>
+
+        <label for="user-browser">사용하는 브라우저를 선택하세요</label>
+        <input list="browser-list" id="user-browser" name="user-browser">
+        <datalist id="browser-list">
+            <option value="크롬">크롬</option>
+            <option value="사파리">사파리</option>
+            <option value="오페라">오페라</option>
+            <option value="웨일">웨일</option>
+        </datalist>
+        <button type="reset">초기화</button>
+        <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

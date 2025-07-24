@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input</title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="test" id="test" placeholder="내용을 입력하세요..">
+    <input type="text" name="id" id="id" required>
+    <!--서버로 전달 불가능, 유저 입력 불가-->
+    <input type="text" name="id" id="id" disabled>
+    <!--value 고정, 유저는 읽을 수만 있고 서버로 전달 가능-->
+    <input type="text" name="id" id="id" readonly value="고양">
+
+    <input type="emal" placeholder="email">
+    <input type="url" placeholder="url">
+    <input type="number">
+
+    <input type="checkbox">
+    <input type="radio">
+
+    <input type="search">
+
+    <input type="datetime-local">
+</body>
+</html>

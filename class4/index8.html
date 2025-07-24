@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input checkbox</title>
+  </head>
+  <body>
+    <h1>사용할 수 있는 기술을 선택해주세요</h1>
+    <!--
+        checkbox,radio name값 통일
+    -->
+    <input type="checkbox" id="html" name="skill">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="skill">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="skill">
+    <label for="js">Javascript</label>
+
+    <h1>성별을 선택하세요.</h1>
+    <!--
+        checkbox,radio name값 통일
+    -->
+    <input type="radio" id="f" name="gender">
+    <label for="f">여</label>
+    <input type="radio" id="m" name="gender">
+    <label for="m">남</label>
+
+    <!--
+        비교적 최근 나온 태그
+        label-input : for-id 로 연결
+        input-datalist : list-id로 연결
+    -->
+    <label for="city">도시 검색:</label>
+    <input list="cities" id="city" name="city" placeholder="도시 이름 입력" />
+    <datalist id="cities">
+    <option value="서울"></option>
+    <option value="부산"></option>
+    <option value="인천"></option>
+    <option value="대구"></option>
+    <option value="광주"></option>
+    <option value="대전"></option>
+    <option value="울산"></option>
+    <option value="제주"></option>
+    </datalist>
+  </body>
+</html>
