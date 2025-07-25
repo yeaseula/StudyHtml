@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        div #id1 {
+            /*1+100 = 101점*/
+        color: green;
+        }
+
+        p {
+            /*1점*/
+        color: black;
+        }
+
+        #id1 {
+            /*100점*/
+        color: blue;
+        }
+
+        .class {
+            /*10점*/
+        color: yellow;
+        }
+
+        #id3 {
+            /* important 는 인라인보다 우선*/
+        color: cyan !important;
+        }
+    </style>
+  </head>
+  <body>
+        <div>
+            <p id="id1" class="class">1. 이 글자는 어떤 색일까요?</p>
+            <!--inliie 스타일은 1000점-->
+            <p id="id2" class="class" style="color:red">2. 이 글자는 어떤 색일까요??</p>
+            <p id="id3" class="class" style="color:pink">3. 이 글자는 어떤 색일까요??</p>
+        </div>
+  </body>
+</html>

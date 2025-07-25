@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        @font-face {
+            font-family: 'ChosunGu';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        /*rem 계산을 위한 셋팅*/
+        html {
+            font-size: 10px;
+            font-size: 62.5%; /*16px * 62.5% = 10px*/
+        }
+        body {
+            font-size: 1.6rem;
+        }
+        /* */
+
+        .color > .keyword {  color:rgb(133, 133, 241); }
+        .color > .hex { color: #bdbdbd; }
+        .color > .currentcolor {
+            font-family: 'ChosunGu';
+            color: blueviolet;
+            font-size: 20px;
+            font-weight: 500;
+            border: 1px solid currentColor;
+            transition: all 0.2s;
+        }
+        .color > .currentcolor:hover {
+            text-decoration: underline;
+            text-decoration-color: #ffcc00;
+            text-decoration-thickness: 3px;
+            text-decoration-style:wavy;
+        }
+
+        .parent{
+            font-size: 10px;
+        }
+        .px {
+            font-size: 20px;
+        }
+        .em {
+            /* 부모요소 폰트크기*2 */
+            font-size: 2em;
+        }
+        .rem {
+            /* html 폰트사이즈 * 2 */
+            font-size: 3rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="color">
+        <p class="keyword">rgb를 사용했어여</p>
+        <p class="hex">헥사코드에용</p>
+        <p class="currentcolor">커런트 컬러는 뭘까?</p>
+    </div>
+
+    <section class="parent">
+        <h2 class="px">px적용</h2>
+        <p class="em">em적용</p>
+        <p class="rem">rem적용</p>
+    </section>
+  </body>
+</html>

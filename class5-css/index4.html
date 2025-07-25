@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 상속</title>
+    <style>
+        p {
+            color: teal;
+            border: 1px solid black;
+            font-size: 20px;
+            font-weight: 700;
+            /* 폰트 속성들만 상속됨 */
+        }
+
+        span {
+            /* inherit - 상속하겠다 */
+            border: inherit;
+            /* initial - 상속을 무시하고 기본값으로 설정 */
+            border: initial;
+            /* unset - 상속되는 속성:상속, 안되는건:기본값 */
+            font-weight: unset;
+            border: unset;
+            text-decoration: underline;
+            /*  */
+            all: revert;
+        }
+    </style>
+  </head>
+  <body>
+    <p>깜장 <span>ggamjang <strong>고양이</strong></span></p>
+  </body>
+</html>

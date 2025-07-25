@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>list style</title>
+    <style>
+        @counter-style Style {
+            system: cyclic;
+            symbols: '🫏''🚩''✒️''❣️''😭';
+            suffix: '----'
+        }
+
+        ul {
+            /* 각 리스트 앞에 붙는 모양 */
+            list-style-type: circle;
+            list-style-type: square;
+            list-style-type: disc;
+            /* 기본값 out */
+            list-style-position: outside;
+            list-style-position: inside;
+            /* background-color: bisque; */
+            /* 기본제공 스타일 말고 커스텀 하고싶을때
+                크기 조절 할 수 없는 문제점 있음
+            */
+            list-style-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' height='10' width='10' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='2'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+            list-style: none;
+            /* 직접 커스텀 가능*/
+            list-style-type: Style;
+        }
+
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+  </body>
+</html>

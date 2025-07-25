@@ -1,0 +1,9 @@
+/* import는 css 가장 최상단에 위치 */
+@import url('./reset.css');
+@import url('./font.css');
+@import url('./layout.css');
+/* */
+
+p {
+    background-color: darkgray;
+}

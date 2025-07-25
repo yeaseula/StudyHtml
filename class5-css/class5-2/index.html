@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사이즈의 상대단위</title>
+    <style>
+        /* 원하는 px / 기준이 되는 px = rem/em */
+        html {
+            font-size: 10px;
+            font-size: 62.5%;
+        }
+        body {
+            font-size: 1.6rem; /* 16px */
+        }
+        p {
+            font-size: 4rem; /* html이 10px로 설정되어있어 그대로 적어도 됨 */
+        }
+        h2 {
+            font-size: 40px;
+        }
+        h3 {
+            /* 20px / 16px = 내가 원하는 px / 부모요소의 px = em */
+            font-size: 1.25em;
+        }
+        .parents {
+            width: 25vw;
+            font-size: 50px;
+            border: 1px solid gold;
+        }
+        .parents .child1 {
+            width: 50vw;
+            font-size: 0.5em;
+            border: 1px solid green;
+        }
+        .parents .child2 {
+            width: 100vw;
+            font-size: 0.5em;
+            border: 1px solid red;
+        }
+    </style>
+  </head>
+  <body>
+    <p>rem을 사용해서 font-size: 40px;</p>
+    <h2>px을 사용해서 font-size: 40px;</h2>
+    <h3>em을 사용해서 font-size: 20px;</h3>
+    <div class="parents">
+        너비가 뷰포트를 기준으로 1/4
+        <br />
+        font-size: 50px;
+        <div class="child1">
+            글씨의 사이즈는 부모의 50%
+            <br />
+            너비가 뷰포트 기준으로 1/2
+            <div class="child2">
+                글씨의 사이즈는 부모의 50%
+                <br />너비가 뷰포트 기준으로 100%
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
