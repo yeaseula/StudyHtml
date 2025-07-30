@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 800px;
+            background-color: salmon;
+            background-image: url(./img/weniv-suri.png);
+            background-repeat: no-repeat;
+            /* 배경이미지 위치 지정 */
+            background-position: right bottom;
+            background-position: left center;
+            background-position: center;
+
+            /* 크기 지정 */
+            background-size: contain; /* 잘리지 않을 정도의 크기, 비율 유지->여백 발생할 수 있음 */
+            background-size: contain;
+
+            all: revert;
+
+            border: 1px solid ;
+            height: 50vh;
+            /* 한방에 적어보기*/
+            /* 다른건 순서가 상관없지만
+                position / size 는 슬래쉬까지 써줘야함.
+                size는 단독사용 불가,
+                position은 단독사용 가능
+            */
+            background: royalblue url('./img/weniv-chilli.png') no-repeat center / cover;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <p>
+        background-image로 작성하는 경우는 장식적인 요소일 때 권장,
+        콘텐츠 흐름을 나타낼 때는 img권장
+    </p>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>padding,margin,margin 병합</title>
+    <style>
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            margin: 20px;
+            /*
+                블록 요소끼리 인접했을 때 겹쳐진 마진이 병합됨
+            */
+        }
+        .parent {
+            background-color: yellowgreen;
+            width: fit-content;
+            /* 부모 자식 간의 마진 병합이 일어날 수 있음
+                1. 부모 요소가 block요소가 아니게 설정
+                2. 부모/자식 요소 간 마진 사이에 구분할 콘텐츠 넣음
+                임시방편으로 사용할 수는 있지만
+                디자인 상 미세한 문제가 생길 수 있음
+                padding: 1px;
+                border: 1px solid transparent;
+                3.overflow 속성 이용
+                overflow: hidden;
+                4. display: flow-root 속성 이용
+                단, IE 환경은 지원하지 않음
+            */
+            display: flow-root;
+        }
+    </style>
+</head>
+  <body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+    </div>
+  </body>
+</html>

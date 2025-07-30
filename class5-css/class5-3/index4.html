@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow</title>
+    <style>
+        * {box-sizing: border-box;}
+        div {
+            border: 3px solid red;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+        .hidden {
+            /* 내용 ... 더보기 */
+            overflow: hidden;
+            word-break: keep-all;/*단어단위로 줄바꿈*/
+            overflow-wrap: break-word;
+        }
+        .scroll {
+            overflow: scroll;
+            /* overflow-x: hidden; */
+            white-space: nowrap; /* 줄바꿈 방지 */
+        }
+        .auto {
+            /* 요소의 크기를 넘어갈 경우에만 scroll생김 */
+            overflow: auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="hidden">
+        긴텍스트..긴텍스트..긴텍스트..긴텍스트..긴텍스트..긴텍스트..
+        긴텍스트..긴텍스트..긴텍스트..긴텍스트..긴텍스트..긴텍스트..
+        긴텍스트..긴텍스트..긴텍스트..긴텍스트..
+        긴텍스트..긴텍스트..긴텍스트..긴텍스트..
+        긴텍스트..긴텍스트..긴텍스트..긴텍스트..긴텍스트..긴텍스트..
+    </div>
+    <div class="hidden">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ullam,
+        sunt possimus temporibus facere, esse animi totam dolorum inventore
+        accusamus nemo. Placeat alias veniam odit quis blanditiis eum soluta
+        accusantium!
+    </div>
+    <div class="scroll">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ullam,
+        sunt possimus temporibus facere, esse animi totam dolorum inventore
+        accusamus nemo. Placeat alias veniam odit quis blanditiis eum soluta
+        accusantium!
+    </div>
+    <div class="auto">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ullam,
+        sunt possimus temporibus facere, esse animi totam dolorum inventore
+        accusamus nemo. Placeat alias veniam odit quis blanditiis eum soluta
+        accusantium!
+    </div>
+  </body>
+</html>

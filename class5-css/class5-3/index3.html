@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border</title>
+    <style>
+        *{
+            /* 요소의 크기를 border,여백 포함해서 계산 */
+            box-sizing: border-box;
+        }
+        div {
+            background-color: brown;
+            width: 150px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        .box1 {
+            border: 10px solid #000;
+            border-style: double dotted;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+        *{box-sizing: border-box;}
+        .button-box {
+            width: 600px;
+            margin: 50px auto;
+            border: 1px solid #bdbdbd;
+            padding: 0 20px 20px;
+        }
+
+        /*공통*/
+        button {
+            min-width: 88px;
+            padding: 9px 25px;
+            font-size: 12px;
+            font-weight: 700;
+            border: 1px solid rgba(52, 63, 80, 1);
+            background-color: rgba(52, 63, 80, 1);
+            transition: all .2s;
+        }
+        button:not(:disabled):hover {
+            box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.2) inset;
+        }
+        button:not(:disabled):active {
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset;
+        }
+
+        /*default*/
+        .default:not(:disabled) {
+            color: rgba(221, 221, 221, 1);
+            box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.1) inset;
+        }
+        .default:not(:disabled):hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+        .default:not(:disabled):active {
+            text-decoration: underline;
+            color: #fff;
+        }
+        .default:disabled {
+            border: 1px solid rgba(26, 32, 44, 1);
+            color: rgba(74, 85, 104, 1);
+        }
+
+        /*positive*/
+        .positive {
+            color: rgba(67, 154, 255, 1);
+        }
+        .positive:hover, .positive:active {
+            text-decoration: underline;
+            color: #fff;
+            border: 1px solid rgba(67, 154, 255, 1);
+            background-color: rgba(67, 154, 255, 1);
+        }
+
+        /*nagative*/
+        .negative {
+            color: rgba(235, 87, 87, 1);
+        }
+        .negative:hover,.negative:active {
+            text-decoration: underline;
+            color: #fff;
+            border: 1px solid rgba(235, 87, 87, 1);
+            background-color: rgba(235, 87, 87, 1);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="button-box">
+        <p>default type</p>
+        <button class="default">Button</button>
+        <button class="default" disabled>Button</button>
+    </div>
+    <div class="button-box">
+        <p>positive type</p>
+        <button class="positive">Yes</button>
+    </div>
+    <div class="button-box">
+        <p>negative type</p>
+        <button class="negative">Del</button>
+    </div>
+  </body>
+</html>
