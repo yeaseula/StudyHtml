@@ -18,3 +18,16 @@
 [복습:블로그 포스팅](https://velog.io/@somv/웹접근성-시멘틱의-중요성)
 <br />
 ![시멘틱태그 만들기_2팀_최종](https://github.com/user-attachments/assets/a8155ecd-ee65-4668-bd61-72aef88b1209)
+
+
+### 250731
+
+css 속성을 통해 진행한 실습들<br />
+아는 내용도 있었지만 실무에서 헷갈렸던 개념들도 있었다.<br />
+다시 한 번 정리하는 계기가 되었다.
+
+<img width="563" height="326" alt="image" src="https://github.com/user-attachments/assets/4cd5e624-1bf6-4055-951a-c37664444333" />
+
+<img width="566" height="398" alt="image" src="https://github.com/user-attachments/assets/0f47f33d-dbe0-4420-8618-c4b2ff11e271" />
+
+짱재밌다.
