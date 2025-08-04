@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 비율 맞추기 실습~</title>
+    <style>
+        .container-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .binky-ratio,.chilli-ratio,.garry-ratio {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        .licat-ratio,.suri-ratio,.wade-ratio {
+            width: 100%;
+            aspect-ratio: 2/1;
+            object-fit: cover;
+        }
+
+        .container-grid > div {
+            height: 0;
+            padding-top: 100%;
+            position: relative;
+        }
+        .container-grid > div.half {
+            padding-top: calc(100% / 2);
+        }
+        .binky-pd,.chilli-pd,.garry-pd,
+        .licat-pd,.suri-pd,.wade-pd {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 이미지 3개는 1:1의 비율 / 나머지 이미지 3개는 2:1 비율 -->
+    <!-- 한 줄에 3개씩 이미지가 배치되도록 너비를 설정 -->
+    <!-- 30분까지 -->
+    <h2>aspect ratio 방식</h2>
+    <div class="container-grid">
+        <img src="./img/weniv-binky.png" class="binky-ratio">
+        <img src="./img/weniv-chilli.png" class="chilli-ratio">
+        <img src="./img/weniv-garry.png" class="garry-ratio">
+        <img src="./img/weniv-licat.png" class="licat-ratio">
+        <img src="./img/weniv-suri.png" class="suri-ratio">
+        <img src="./img/weniv-wade.png" class="wade-ratio">
+    </div>
+    <h2>padding-top</h2>
+    <div class="container-grid">
+        <div>
+            <img src="./img/weniv-binky.png" class="binky-pd">
+        </div>
+        <div>
+            <img src="./img/weniv-chilli.png" class="chilli-pd">
+        </div>
+        <div>
+            <img src="./img/weniv-garry.png" class="garry-pd">
+        </div>
+        <div class="half">
+            <img src="./img/weniv-licat.png" class="licat-pd">
+        </div>
+        <div class="half">
+            <img src="./img/weniv-suri.png" class="suri-pd">
+        </div>
+        <div class="half">
+            <img src="./img/weniv-wade.png" class="wade-pd">
+        </div>
+    </div>
+  </body>
+</html>

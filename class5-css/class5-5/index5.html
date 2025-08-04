@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+        /* 그리드의 셀 크기와 아이템의 크기는 다른 개념 */
+        .container {
+            display: grid;
+            background-color: #eee;
+
+            /*
+            auto-fill, auto-fit
+            들어갈 수 있는 개수를 자동으로 계산
+            */
+
+
+            /*가능한 많은 컬럼을 만들어냅니다. 컨테이너에 빈 공간이 남을 수 있습니다.*/
+            /* grid-template-columns: repeat(auto-fill,minmax(100px, auto)); */
+
+            /* 화면에 딱 맞게 각각의 넓이가 조정됨 */
+            /* grid-template-columns: repeat(auto-fit,minmax(100px, auto));
+             */
+
+             /* 정렬 */
+            grid-template-columns: repeat(3,150px);
+            grid-template-rows: repeat(3,150px);
+
+            /* 그리드를 움직임 */
+            /* 1.트랙 정렬 */
+            height: 90vh;
+            align-content: center;
+
+            /* 2.수평정렬 */
+            justify-content: center;
+
+            /* 3.cell을 기준으로 내부의 아이템을 정렬 */
+            align-items: center;
+            justify-items: center;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+            border: 1px solid;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+  </body>
+</html>

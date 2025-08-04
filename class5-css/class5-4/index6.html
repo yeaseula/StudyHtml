@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 600px;
+        margin: 20px auto;
+        gap: 10px;
+        margin-bottom: 2000px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+        border: 1px solid black;
+      }
+      .pink {
+        background-color: pink;
+        /* position */
+        position: relative;
+        top: 10px;
+        left: 10px;
+        /* sticy : top이나 bottom이 지정되어있어야 작동*/
+        position: sticky;
+      }
+      .baby {
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+        /* absolute는 주변의 레이아웃을 변경합니다 */
+        position: absolute;
+        top: 20px;
+        left: 40px;
+
+        /*inset: 상하좌우 한번에 적용 가능*/
+        inset: 10px;
+
+        /* fixed: 뷰포트를 기준으로 고정된 위치에 배정합니다 */
+        /* 일반적인 흐름에서 제거됩니다 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box pink">
+        5
+        <div class="baby">child</div>
+      </div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+        @font-face {
+            font-family: 'GapyeongHanseokbong-Bold';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongHanseokbong-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        * { font-family: 'GapyeongHanseokbong-Bold';
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .body-inner {
+            position: relative;
+            display: inline-block;
+        }
+        .container {
+            position: absolute;
+            top: 10px;
+            right: -100px;
+            width: 500px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-width: 1px;
+            border-style: double;
+            border-width: 15px;
+            border-color: #fff;
+            background-image: linear-gradient(to right, red, green);
+        }
+        .container p {
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 4px 16px thistle;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="body-inner">
+    <img src="./img/image.jpg" alt="">
+        <div class="container">
+            <p>지피티 없으면 죽는병 걸림</p>
+        </div>
+    </div>
+  </body>
+</html>

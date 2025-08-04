@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        /*
+            width, height 0 => 스크린리더 인식못할 수 있음
+        */
+        .sr-only {
+            position: absolute;
+            top: auto;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        /* clip 사용 방식
+            clip -> 구버전 브라우저
+            clip-path 최신브라우저
+        */
+        .ally-hidden {
+            clip: rect(1px,1px,1px,1px);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+        }
+    </style>
+  </head>
+  <body>
+    <p class="sr-only">sr - only contents</p>
+
+  </body>
+</html>

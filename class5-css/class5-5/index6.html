@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid 실습</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(100px, auto));
+            gap: 10px;
+            justify-content: center;
+        }
+        .container .item {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container2 {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: minmax(50px,1fr) 2fr 3fr;
+        }
+        .container2 .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: greenyellow;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>style1</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+    </div>
+    <h2>style2</h2>
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+  </body>
+</html>

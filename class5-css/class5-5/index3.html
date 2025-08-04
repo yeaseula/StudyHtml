@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 실습</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            height: 60px;
+            background-color: pink;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        main {
+            flex-basis: 0;
+            flex-grow: 1;
+            background-color: skyblue;
+            padding: 0 20px;
+        }
+        footer {
+            height: 60px;
+            background-color: green;
+            padding: 0 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <header>
+            <h1>Hello World</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>main</h2>
+        </main>
+        <footer>
+            <h2>footer</h2>
+        </footer>
+    </div>
+  </body>
+</html>

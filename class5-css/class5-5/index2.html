@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 심화</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: #eee;
+            min-height: 30vh;
+        }
+        .item {
+            background-color: wheat;
+            padding: 10px;
+            /*flex-basis 초기 크기 결정
+                direction row이면 width 값,
+                column이면 height 값 결정
+            */
+        }
+        .item:first-child {
+            flex-basis: 100px;
+        }
+        .item:nth-child(3) {
+            /* flex-basis: 10rem; */
+        }
+        /* flex-grow : 여분 공간을 어떤 비율로 나눌지 결정
+            기본값은 0
+        */
+        .item:nth-child(2) {
+            flex-grow: 1;
+        }
+        .item:nth-child(4) {
+            flex-grow: 2;
+        }
+
+        .item {
+            /* 요소에게 동일한 크기를 할당해줌 */
+            /* flex-basis: 0 !important;
+            flex-grow: 1 !important; */
+        }
+
+        /* flex-shrink 줄어드는 크기 비율을 지정 */
+        .item:nth-child(2) {
+            /* 두번째 item은 basis 이하로 줄어들지 않음
+            shrink 크기가 커질수록 줄어드는 비율이 커짐
+            */
+            /* flex-basis: 200px;
+            flex-shrink: 0; */
+        }
+
+        .item:nth-child(3) {
+            /* grow shrink basis 순서로 한꺼번에*/
+            flex: 3 1 200px;
+        }
+
+        /* flex-grow:0 shrink:0 basis:auto
+            flex:none;
+
+            flex-grow:1 shrink:1 flex-basis:auto
+            flex:auto;
+
+            **auto는 width랑 height 결정 가능
+            안에 들어간 컨텐츠의 크기에 따라 유동적으로 변경가능
+
+            flex-shrink:1 flex-basis:0
+            flex:1;
+
+            **basis 0으로 하면 화면에 안보일수있음!
+            grow값으로 늘려놓으면 보입니더
+        */
+
+        /* 개별 아이템에 대한 교차축 정렬 */
+        .item:nth-child(3) {
+            align-self: flex-start;
+        }
+        .item:nth-child(2) {
+            align-self: stretch;
+        }
+
+        /* order 속성 : 기본값은 0
+        숫자가 작을수록 앞으로 배치
+        숫자가 동일하다면 마크업 순서대로 배치
+        */
+        .item:nth-child(5) {
+            order: -2;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+  </body>
+</html>
