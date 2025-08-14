@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: #eee;
+            /* transition: all 1s; */
+
+            /*전환효과를 적용할 속성*/
+            transition-property: background-color;
+            transition-property: all;
+
+            /* 시간 */
+            transition-duration: 0.7s;
+
+            /* 타이밍 함수 */
+            transition-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            transition-timing-function: linear;
+
+            /*단계별 변화-뚝뚝 끊기는 느낌*/
+            transition-timing-function: steps(6);
+
+            /*변화 지연*/
+            transition-delay: 1s;
+
+            transition: none;
+
+            /* 각각 속성별로도 트랜지션 줄 수 있음 */
+            transition: color 2s ease, background-color 0.7s linear;
+
+        }
+        .box:hover {
+            background-color: salmon;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+        <h2>hello world</h2>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 grid</title>
+    <style>
+        @font-face {
+            font-family: 'SpoqaHanSansNeo-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'SpoqaHanSansNeo-Regular';}
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-size: 1.6rem;
+        }
+        section {
+            height: 100vh;
+            margin: auto;
+            max-width: 1260px;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: 1fr 486px;
+            gap: 100px;
+            justify-content: center;
+            align-content: center;
+        }
+        .des-cont {
+            align-self: stretch;
+        }
+        .title {
+            font-size: 7rem;
+        }
+        .title > span {
+            font-weight: 700;
+        }
+        .cont {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: rgba(71, 73, 77, 1);
+        }
+        .img-cont {
+            display: grid;
+            grid-template-rows: repeat(2, minmax(280px, auto));
+            gap: 20px;
+        }
+        .img-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 486 / 280;
+            border-radius: 20px;
+        }
+        .img-box:first-child {
+            background: url('./img/img1.jpg') no-repeat center / cover;
+        }
+        .img-box:nth-child(2) {
+            background: url('./img/img1.jpg') no-repeat center / cover;
+        }
+        .text-inner {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(18, 19, 20, 0.8);
+            border-radius: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            padding: 40px 30px 30px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .text-inner > p {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .text-inner > a {
+            align-self: end;
+            color: #fff;
+            text-decoration: unset;
+        }
+        @media screen and (max-width:992px) {
+            section {
+                height: auto;
+                margin: 100px auto;
+                max-width: 1260px;
+                padding: 0 30px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 60px;
+                justify-content: center;
+                align-content: start;
+            }
+            .cont {
+                font-size: 1.8rem;
+            }
+            .img-cont {
+                grid-template-columns: repeat(1,1fr 1fr);
+                grid-template-rows: auto;
+                gap: 20px;
+            }
+            .img-box {
+                aspect-ratio: 344 / 198;
+            }
+            .text-inner {
+                padding: 30px 20px 20px 30px;
+            }
+            .text-inner > p {
+                font-size: 2.4rem;
+            }
+        }
+        @media screen and (max-width:610px) {
+            section {
+                padding: 0 16px;
+                gap: 40px;
+            }
+            .title {
+                font-size: 3.6rem;
+            }
+            .cont {
+                margin-top: 14px;
+                font-size: 1.4rem;
+            }
+            .img-cont {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2,minmax(105px, auto));
+                gap: 14px;
+            }
+            .img-box {
+                aspect-ratio: 356 / 205;
+            }
+            .text-inner > p {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            .text-inner > a {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <section>
+        <div class="des-cont">
+            <p class="title">위니브에서<br>
+                <span>함께 콘텐츠 제작하실 분을 모십니다.</span>
+            </p>
+            <p class="cont">
+                위니브는 ICT 연구 및 (코딩)교육 기관이며<br>
+                다양한 사회 공헌 활동을 하고 있습니다.
+            </p>
+        </div>
+        <div class="img-cont">
+            <div class="img-box">
+                <div class="text-inner">
+                    <p>IT 교육 영상 콘텐츠</p>
+                    <a href="">바로가기 ></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="text-inner">
+                    <p>IT 서적</p>
+                    <a href="">바로가기 ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

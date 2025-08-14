@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 200px auto;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+        .box:hover {
+            /* 애니메이션을 멈출수있음 */
+            animation-play-state: paused;
+        }
+        @keyframes move {
+            0% {
+                background-color: yellowgreen;
+                transform: translate(-100px);
+            }
+            100% {
+                background-color: green;
+                transform: translate(100px);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

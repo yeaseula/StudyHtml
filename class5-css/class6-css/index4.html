@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라이캣 움직이기</title>
+    <style>
+        .box {
+            width: 168px;
+            height: 200px;
+            background: url(./img/steps-licat.png) no-repeat top left / auto 100%;
+            animation: steps 0.5s steps(6) infinite;
+        }
+
+        @keyframes steps {
+            0% {
+                background-position: top left;
+            }
+            100% {
+                background-position: top right;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

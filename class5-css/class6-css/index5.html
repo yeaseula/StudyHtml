@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시계 애니메이션 실습</title>
+    <style>
+        .box {
+            border-radius: 20px;
+            background-color: dodgerblue;
+            aspect-ratio: 1;
+            width: 500px;
+            position: relative;
+        }
+        .hour {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 5px;
+            background-color: salmon;
+            transform-origin: center left;
+            animation: rotate 80s infinite;
+        }
+        .min {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 5px;
+            background-color: green;
+            transform-origin: center left;
+            animation: rotate 70s infinite;
+        }
+        .sec {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 230px;
+            height: 5px;
+            background-color: gainsboro;
+            transform-origin: center left;
+            animation: rotate 60s steps(60) infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .box2 {
+            width: 113px;
+            height: 176px;
+            background: url('./img/building.png') no-repeat top left / auto 100%;
+            animation: build 4s steps(33) infinite;
+        }
+
+        @keyframes build {
+            0% {
+                background-position: top left;
+            }
+            100% {
+                background-position: top right;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <h2>시계</h2>
+    <div class="box">
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+    </div>
+    <h2>빌딩</h2>
+    <div class="box2"></div>
+  </body>
+</html>
